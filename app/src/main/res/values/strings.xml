@@ -7,6 +7,9 @@
     <string name="see_all">Ver todos</string>
     <string name="about_game">Sobre o jogo</string>
     <string name="buy_now">COMPRAR</string>
+    <string name="install">INSTALAR</string>
+    <string name="uninstall">DESINSTALAR</string>
+    <string name="in_library">NA BIBLIOTECA</string>
     <string name="price_format">R$ %.2f</string>
     <string name="installed">Instalado</string>
     <string name="not_installed">Não instalado</string>
