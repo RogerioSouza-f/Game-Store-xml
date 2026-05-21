@@ -14,6 +14,8 @@ data class Game(
     val description: String,
     val bannerRes: Int,
     val thumbnailRes: Int,
-    val isInstalled: Boolean = false,
+    var isPurchased: Boolean = false,
+    var isInstalled: Boolean = false,
+    var isFavorite: Boolean = false,
     val playTime: String? = null
 ) : Parcelable
