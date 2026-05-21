@@ -33,7 +33,6 @@ class StoreFragment : Fragment() {
     }
 
     private fun setupBanner() {
-        // Define Elden Ring como o jogo em destaque no banner
         val featuredGame = GameData.games.find { it.title == "Elden Ring" }
         featuredGame?.let {
             binding.bannerImage.setImageResource(it.bannerRes)
