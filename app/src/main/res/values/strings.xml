@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Loja de Jogos</string>
+    <string name="title_store">Loja</string>
+    <string name="title_library">Biblioteca</string>
+    <string name="title_profile">Perfil</string>
+    <string name="featured_label">Destaques</string>
+    <string name="see_all">Ver todos</string>
+    <string name="about_game">Sobre o jogo</string>
+    <string name="buy_now">COMPRAR</string>
+    <string name="price_format">R$ %.2f</string>
+    <string name="installed">Instalado</string>
+    <string name="not_installed">Não instalado</string>
+</resources>
