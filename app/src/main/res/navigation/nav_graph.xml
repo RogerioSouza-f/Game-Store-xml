@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navigation_store">
+
+    <fragment
+        android:id="@+id/navigation_store"
+        android:name="com.example.lojadejogos.ui.store.StoreFragment"
+        android:label="Loja"
+        tools:layout="@layout/fragment_store">
+        <action
+            android:id="@+id/action_store_to_detail"
+            app:destination="@id/navigation_detail" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_library"
+        android:name="com.example.lojadejogos.ui.library.LibraryFragment"
+        android:label="Biblioteca"
+        tools:layout="@layout/fragment_library">
+        <action
+            android:id="@+id/action_library_to_detail"
+            app:destination="@id/navigation_detail" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.lojadejogos.ui.profile.ProfileFragment"
+        android:label="Perfil"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/navigation_detail"
+        android:name="com.example.lojadejogos.ui.detail.DetailFragment"
+        android:label="Detalhes"
+        tools:layout="@layout/fragment_detail">
+        <argument
+            android:name="game"
+            app:argType="com.example.lojadejogos.model.Game" />
+    </fragment>
+</navigation>
