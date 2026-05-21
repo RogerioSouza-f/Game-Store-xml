@@ -8,10 +8,17 @@ import com.example.lojadejogos.databinding.ItemGameBinding
 import com.example.lojadejogos.model.Game
 import java.util.Locale
 
+import coil.load
+
 class GameAdapter(
-    private val games: List<Game>,
+    private var games: List<Game>,
     private val onItemClick: (Game) -> Unit
 ) : RecyclerView.Adapter<GameAdapter.GameViewHolder>() {
+
+    fun updateData(newGames: List<Game>) {
+        games = newGames
+        notifyDataSetChanged()
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GameViewHolder {
         val binding = ItemGameBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -33,7 +40,10 @@ class GameAdapter(
             binding.gameRating.text = String.format(Locale.US, "%.1f", game.rating)
             
             if (game.thumbnailRes != 0) {
-                binding.gameThumbnail.setImageResource(game.thumbnailRes)
+                binding.gameThumbnail.load(game.thumbnailRes) {
+                    crossfade(true)
+                    placeholder(R.color.surface_dark)
+                }
             }
             
             binding.root.setOnClickListener { onItemClick(game) }
