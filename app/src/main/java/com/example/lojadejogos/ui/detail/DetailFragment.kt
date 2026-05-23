@@ -16,7 +16,7 @@ class DetailFragment : Fragment() {
     private var _binding: FragmentDetailBinding? = null
     private val binding get() = _binding!!
     
-    // O erro de referência desaparecerá após o "Build > Make Project"
+
     private val args: DetailFragmentArgs by navArgs()
 
     override fun onCreateView(
